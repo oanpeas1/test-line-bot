@@ -37,7 +37,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             {
                 $txtback = 'จริงๆเลย';
             }
-            reply_msg($content,$replyToken);      
+            reply_msg($txtback,$replyToken);      
         }
     }
 }
