@@ -42,7 +42,12 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             {
                 $txtback = 'เจอแล้ว';
             }
-            reply_msg($txtback,$replyToken);      
+            reply_msg($txtback,$replyToken); 
+            if($txtin == 'งง')
+            {
+                $txtback = 'อย่าถามเยอะ อคิณ ปวดหัว';
+            }
+            reply_msg($txtback,$replyToken);     
         }
     }
 }
