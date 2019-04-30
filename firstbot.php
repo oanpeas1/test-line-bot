@@ -36,10 +36,10 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
             $sql_text = "SELECT * FROM tbl_test WHERE answer LIKE '%textin%'";
-            $query = mysqli_query($sql_text);
+            $query = mysqli_query($conn,$sql_text);
             while($obj = mysqli_fetch_assoc($query))
             {
-               $txt_back = $txt_back." \n".$obj["equip_name"];
+               $txtback = $txtback." \n".$obj["equip_name"];
             }
             reply_msg($txtback,$replyToken);     
         }
